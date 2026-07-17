@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.truckgearauto.co.zw"),
   title: "TGA Truck Gear Autoparts | Shacman Parts Zimbabwe",
   description:
     "Zimbabwe-based Shacman truck parts and accessories from TGA Truck Gear Autoparts, Shop 13, 35 Belvedere Road, Harare.",
