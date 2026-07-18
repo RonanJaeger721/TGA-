@@ -59,7 +59,9 @@ export function SiteFooter() {
         <h3>Brands</h3>
         <div className="footer-brands">
           {brands.map((brand) => (
-            <span key={brand}>{brand}</span>
+            <span className={`brand-mark brand-${brand.toLowerCase().replaceAll(" ", "-")}`} key={brand}>
+              {brand}
+            </span>
           ))}
         </div>
       </div>

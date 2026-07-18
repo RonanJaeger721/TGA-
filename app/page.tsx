@@ -34,7 +34,9 @@ export default function Home() {
         <p className="eyebrow">Our brands</p>
         <div className="brand-grid">
           {brands.map((brand) => (
-            <span key={brand}>{brand}</span>
+            <span className={`brand-mark brand-${brand.toLowerCase().replaceAll(" ", "-")}`} key={brand}>
+              {brand}
+            </span>
           ))}
         </div>
       </section>

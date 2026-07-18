@@ -1,5 +1,5 @@
 import { PageHero, PageShell } from "../components";
-import { models, parts } from "../site-data";
+import { brands, models, parts } from "../site-data";
 
 export default function SparePartsPage() {
   return (
@@ -15,6 +15,17 @@ export default function SparePartsPage() {
         {models.map((model) => (
           <span key={model}>Shacman {model}</span>
         ))}
+      </section>
+
+      <section className="brand-section compact">
+        <p className="eyebrow">Supported brands</p>
+        <div className="brand-grid">
+          {brands.map((brand) => (
+            <span className={`brand-mark brand-${brand.toLowerCase().replaceAll(" ", "-")}`} key={brand}>
+              {brand}
+            </span>
+          ))}
+        </div>
       </section>
 
       <section className="parts-section">

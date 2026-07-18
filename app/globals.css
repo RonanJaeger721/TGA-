@@ -176,8 +176,8 @@ img { display: block; max-width: 100%; }
 .home-hero h1,
 .sub-hero h1 {
   margin: 12px 0 0;
-  font-size: clamp(2.6rem, 5vw, 5.2rem);
-  line-height: 1;
+  font-size: clamp(2.25rem, 4.1vw, 4.35rem);
+  line-height: 1.04;
   letter-spacing: 0;
 }
 .hero-copy p:not(.eyebrow),
@@ -285,6 +285,7 @@ img { display: block; max-width: 100%; }
   padding: 82px 5vw;
 }
 .brand-section { background: white; }
+.brand-section.compact { padding-top: 42px; padding-bottom: 42px; }
 .brand-grid,
 .model-strip,
 .offer-strip,
@@ -304,7 +305,33 @@ img { display: block; max-width: 100%; }
   box-shadow: 0 12px 34px rgba(9, 21, 34, 0.06);
   font-weight: 800;
 }
-.brand-grid span { font-size: clamp(1.1rem, 2vw, 1.6rem); }
+.brand-grid span { font-size: clamp(0.98rem, 1.35vw, 1.22rem); }
+
+.brand-mark {
+  position: relative;
+  min-width: 150px;
+  justify-content: center;
+  color: var(--ink);
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.brand-mark::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 0 5px rgba(237, 28, 46, 0.1);
+}
+.brand-shacman::before { background: #111; box-shadow: 0 0 0 5px rgba(17,17,17,0.1); }
+.brand-cummins::before { background: #c8102e; }
+.brand-weichai::before { background: #0d63ad; }
+.brand-wabco::before { background: #005baa; }
+.brand-fleetguard::before { background: #d21f2b; }
+.brand-hande-axle::before { background: #245f9e; }
 
 .scene-grid,
 .service-scenes,
@@ -360,8 +387,8 @@ img { display: block; max-width: 100%; }
 }
 h2 {
   margin: 10px 0 0;
-  font-size: clamp(1.9rem, 3.4vw, 3.6rem);
-  line-height: 1.04;
+  font-size: clamp(1.65rem, 2.7vw, 2.95rem);
+  line-height: 1.08;
   letter-spacing: 0;
 }
 .section-head { max-width: 780px; margin-bottom: 34px; }
@@ -396,6 +423,9 @@ h2 {
   gap: 36px;
   color: white;
   background: linear-gradient(120deg, #07111f 0 58%, #092d51 58% 100%);
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
 }
 .site-footer img {
   width: min(420px, 100%);
@@ -408,6 +438,12 @@ h2 {
 .site-footer h3 { margin: 0 0 12px; }
 .site-footer a,
 .site-footer p { display: block; color: rgba(255,255,255,0.78); margin: 8px 0; }
+.site-footer .footer-brands span {
+  color: var(--ink);
+  background: rgba(255,255,255,0.96);
+  border-color: rgba(255,255,255,0.32);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.15);
+}
 
 @keyframes riseIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -436,7 +472,6 @@ h2 {
   .about-split,
   .history-section,
   .contact-grid-page,
-  .site-footer,
   .part-card,
   .model-card {
     animation: revealOnScroll both;
@@ -481,7 +516,7 @@ h2 {
     padding: 58px 20px;
   }
   .home-hero h1,
-  .sub-hero h1 { font-size: clamp(2.45rem, 11vw, 4.6rem); }
+  .sub-hero h1 { font-size: clamp(2.1rem, 9vw, 3.65rem); }
   .truck-stage { min-height: 410px; }
   .stage-part { right: 0; width: 74%; height: 210px; }
   .stage-logo { top: 174px; width: 82%; }
