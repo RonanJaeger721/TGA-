@@ -3,7 +3,6 @@ export const contacts = {
   phone1: "+2638644042072",
   phone2: "0783 298 888",
   email: "sales@truckgearauto.co.zw",
-  website: "www.truckgearauto.co.zw",
 };
 
 export const brands = [

@@ -19,7 +19,6 @@ export default function ContactPage() {
           <a href="tel:+2638644042072">{contacts.phone1}</a>
           <a href="tel:+263783298888">{contacts.phone2}</a>
           <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
-          <a href={`https://${contacts.website}`}>{contacts.website}</a>
           <p>{contacts.address}</p>
         </article>
         <article className="contact-card large light">
@@ -27,7 +26,6 @@ export default function ContactPage() {
           {socials.map((social) => (
             <span key={social}>{social}</span>
           ))}
-          <p>Add exact social links here once the client confirms the handles.</p>
         </article>
       </section>
     </PageShell>
