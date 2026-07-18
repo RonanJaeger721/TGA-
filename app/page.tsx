@@ -34,8 +34,8 @@ export default function Home() {
         <p className="eyebrow">Our brands</p>
         <div className="brand-grid">
           {brands.map((brand) => (
-            <span className={`brand-mark brand-${brand.toLowerCase().replaceAll(" ", "-")}`} key={brand}>
-              {brand}
+            <span className="brand-logo-card" key={brand.name}>
+              {brand.logo ? <img src={brand.logo} alt={`${brand.name} logo`} /> : <strong>{brand.name}</strong>}
             </span>
           ))}
         </div>

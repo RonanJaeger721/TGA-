@@ -45,7 +45,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div>
-        <img src="/brand/shacman-mark.jpeg" alt="Shacman parts and accessories" />
+        <img className="footer-main-logo" src="/brand/shacman-mark.jpeg" alt="Shacman parts and accessories" />
         <p>Truck Gear Auto Parts supplies heavy-duty spare parts across Zimbabwe and Southern Africa.</p>
       </div>
       <div>
@@ -59,8 +59,8 @@ export function SiteFooter() {
         <h3>Brands</h3>
         <div className="footer-brands">
           {brands.map((brand) => (
-            <span className={`brand-mark brand-${brand.toLowerCase().replaceAll(" ", "-")}`} key={brand}>
-              {brand}
+            <span className="brand-logo-card" key={brand.name}>
+              {brand.logo ? <img src={brand.logo} alt={`${brand.name} logo`} /> : <strong>{brand.name}</strong>}
             </span>
           ))}
         </div>

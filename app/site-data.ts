@@ -7,12 +7,12 @@ export const contacts = {
 };
 
 export const brands = [
-  "Shacman",
-  "Cummins",
-  "Weichai",
-  "Wabco",
-  "Fleetguard",
-  "Hande Axle",
+  { name: "Shacman", logo: "/brand/logos/shacman.jpg" },
+  { name: "Cummins", logo: "/brand/logos/cummins.jpg" },
+  { name: "Weichai", logo: null },
+  { name: "Wabco", logo: "/brand/logos/wabco.jpg" },
+  { name: "Fleetguard", logo: "/brand/logos/fleetguard.jpg" },
+  { name: "Hande Axle", logo: "/brand/logos/hande-axle.jpg" },
 ];
 
 export const models = ["H3000", "X3000", "X5000", "F3000", "M3000"];
