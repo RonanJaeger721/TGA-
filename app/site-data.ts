@@ -1,6 +1,6 @@
 export const contacts = {
   address: "Shop 13, 33 Belvedere Road, Harare, Zimbabwe",
-  phone1: "0781 932 267",
+  phone1: "+2638644042072",
   phone2: "0783 298 888",
   email: "sales@truckgearauto.co.zw",
   website: "www.truckgearauto.co.zw",
@@ -54,8 +54,41 @@ export const offers = [
   "Genuine and quality spare parts",
   "Parts sourcing and importation",
   "Shipping solutions",
-  "Secure storage",
-  "Distribution and delivery",
+  "Secure warehouse storage",
+  "Distribution and last-mile delivery",
+];
+
+export const serviceOfferings = [
+  {
+    title: "Genuine & Quality Spare Parts",
+    text:
+      "Brand-new and reconditioned spares for leading Asian truck brands including SINOTRUK, SHACMAN, WEICHAI and Cummins.",
+  },
+  {
+    title: "Parts Sourcing & Importation",
+    text:
+      "Hard-to-find truck parts sourced directly from trusted suppliers when the part is not available locally.",
+  },
+  {
+    title: "Shipping Solutions",
+    text:
+      "Local and international shipping support through reliable sea, air and road transport channels.",
+  },
+  {
+    title: "Secure Storage",
+    text:
+      "Safe, flexible and cost-effective warehouse storage for short-term and long-term spare-parts requirements.",
+  },
+  {
+    title: "Distribution & Delivery",
+    text:
+      "Bulk spares distribution and last-mile delivery solutions tailored to fleet and workshop needs.",
+  },
+  {
+    title: "Truck & Engine Support",
+    text:
+      "Support services for Shacman trucks, Weichai engines and Cummins engines, including practical diagnosis guidance.",
+  },
 ];
 
 export const profile = {
@@ -70,14 +103,11 @@ export const profile = {
 };
 
 export const sceneImages = {
-  warehouse:
-    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80",
+  warehouse: "/brand/warehouse-shacman.jpeg",
   sales:
     "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=80",
-  workshop:
-    "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1400&q=80",
+  workshop: "/brand/service-advisor.jpeg",
   mechanics:
     "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=80",
-  diagnostics:
-    "https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1400&q=80",
+  diagnostics: "/brand/diagnosis-tablet.jpeg",
 };

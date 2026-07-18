@@ -16,7 +16,7 @@ export default function ContactPage() {
       <section className="contact-grid-page">
         <article className="contact-card large">
           <h2>All contacts</h2>
-          <a href="tel:+263781932267">{contacts.phone1}</a>
+          <a href="tel:+2638644042072">{contacts.phone1}</a>
           <a href="tel:+263783298888">{contacts.phone2}</a>
           <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
           <a href={`https://${contacts.website}`}>{contacts.website}</a>

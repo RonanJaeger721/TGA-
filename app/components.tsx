@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ScrollMotion } from "./scroll-motion";
 import { brands, contacts } from "./site-data";
 
 const navItems = [
@@ -33,7 +34,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <a className="nav-call" href="https://wa.me/263781932267">
+        <a className="nav-call" href="https://wa.me/2638644042072">
           Send inquiry
         </a>
       </header>
@@ -50,7 +51,7 @@ export function SiteFooter() {
       </div>
       <div>
         <h3>Contact</h3>
-        <a href="tel:+263781932267">{contacts.phone1}</a>
+        <a href="tel:+2638644042072">{contacts.phone1}</a>
         <a href="tel:+263783298888">{contacts.phone2}</a>
         <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
         <p>{contacts.address}</p>
@@ -72,6 +73,7 @@ export function SiteFooter() {
 export function PageShell({ children }: { children: React.ReactNode }) {
   return (
     <main className="site-shell">
+      <ScrollMotion />
       <SiteHeader />
       {children}
       <SiteFooter />

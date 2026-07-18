@@ -376,6 +376,7 @@ img { display: block; max-width: 100%; }
 .brand-hande-axle::before { background: #245f9e; }
 
 .scene-grid,
+.service-command,
 .service-scenes,
 .about-split,
 .history-section,
@@ -384,7 +385,9 @@ img { display: block; max-width: 100%; }
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
+.service-scenes { grid-template-columns: repeat(3, 1fr); }
 .scene-grid article,
+.service-command,
 .service-scenes article,
 .about-split article,
 .history-section > div,
@@ -410,6 +413,7 @@ img { display: block; max-width: 100%; }
   box-shadow: var(--shadow-strong);
 }
 .scene-grid img,
+.service-command-image img,
 .service-scenes img,
 .sub-hero img,
 .part-card img {
@@ -419,6 +423,7 @@ img { display: block; max-width: 100%; }
 }
 .sub-hero img { border-radius: 16px; box-shadow: var(--shadow); }
 .scene-grid article div,
+.service-command-copy,
 .service-scenes article div,
 .about-split article,
 .history-section > div,
@@ -449,6 +454,99 @@ h2 {
 .model-card span { color: var(--blue); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; }
 .model-card strong { font-size: 1.18rem; }
 .service-list { padding: 0 5vw 82px; }
+.service-command {
+  align-items: stretch;
+  background:
+    radial-gradient(circle at 14% 20%, rgba(13, 99, 173, 0.13), transparent 30%),
+    linear-gradient(135deg, #ffffff 0%, #f6f9fc 52%, #ffffff 100%);
+}
+.service-command-image {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  border-radius: 16px 0 0 16px;
+}
+.service-command-image img {
+  height: 100%;
+  aspect-ratio: auto;
+  transition: transform 700ms ease;
+}
+.service-command:hover .service-command-image img { transform: scale(1.045); }
+.service-command-image span {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 999px;
+  color: white;
+  background: rgba(7,17,31,0.72);
+  backdrop-filter: blur(14px);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.service-command-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service-accordion {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+.service-accordion details {
+  border: 1px solid rgba(13, 99, 173, 0.14);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.78);
+  box-shadow: 0 14px 36px rgba(9, 21, 34, 0.06);
+  overflow: hidden;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+.service-accordion details:hover {
+  transform: translateY(-3px);
+  border-color: rgba(237, 28, 46, 0.25);
+  box-shadow: 0 22px 54px rgba(9, 21, 34, 0.1);
+}
+.service-accordion summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  color: var(--ink);
+  font-weight: 900;
+}
+.service-accordion summary::-webkit-details-marker { display: none; }
+.service-accordion summary::after {
+  content: "+";
+  margin-left: auto;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: var(--blue);
+  transition: transform 220ms ease, background 220ms ease;
+}
+.service-accordion details[open] summary::after {
+  content: "−";
+  background: var(--red);
+  transform: rotate(180deg);
+}
+.service-accordion summary span {
+  color: var(--red);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+}
+.service-accordion details p {
+  margin: 0;
+  padding: 0 20px 20px 58px;
+}
 .offer-strip { background: linear-gradient(90deg, var(--red), var(--blue)); }
 .offer-strip span { color: white; background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.24); }
 .history-section { background: #edf2f7; }
@@ -515,9 +613,33 @@ h2 {
 @keyframes truckMove { 50% { transform: translateX(-34px); } }
 @keyframes wheelSpin { to { transform: rotate(360deg); } }
 
+.motion-ready .reveal-target {
+  opacity: 0;
+  transform: translateY(34px) scale(0.985);
+  filter: blur(5px);
+  transition:
+    opacity 720ms ease var(--reveal-delay, 0ms),
+    transform 720ms cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms),
+    filter 720ms ease var(--reveal-delay, 0ms);
+}
+.motion-ready .reveal-target.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+.motion-ready .site-footer {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+.motion-ready .site-footer > div.reveal-target {
+  filter: none;
+}
+
 @supports (animation-timeline: view()) {
   .brand-section,
   .scene-grid,
+  .service-command,
   .offer-strip,
   .parts-section,
   .model-strip,
@@ -525,6 +647,7 @@ h2 {
   .about-split,
   .history-section,
   .contact-grid-page,
+  .service-accordion details,
   .part-card,
   .model-card {
     animation: revealOnScroll both;
@@ -547,6 +670,7 @@ h2 {
   .home-hero,
   .sub-hero,
   .scene-grid,
+  .service-command,
   .service-scenes,
   .about-split,
   .history-section,
@@ -559,6 +683,7 @@ h2 {
   .brand-section,
   .parts-section,
   .scene-grid,
+  .service-command,
   .offer-strip,
   .model-strip,
   .service-scenes,
@@ -571,6 +696,8 @@ h2 {
   .home-hero h1,
   .sub-hero h1 { font-size: clamp(2.1rem, 9vw, 3.65rem); }
   .truck-stage { min-height: 410px; }
+  .service-command-image { min-height: 360px; border-radius: 16px 16px 0 0; }
+  .service-accordion details p { padding-left: 20px; }
   .stage-part { right: 0; width: 74%; height: 210px; }
   .stage-logo { top: 174px; width: 82%; }
   .moving-truck { right: -120px; transform: scale(0.74); transform-origin: right bottom; }
