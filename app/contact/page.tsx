@@ -1,7 +1,12 @@
 import { PageHero, PageShell } from "../components";
 import { contacts } from "../site-data";
 
-const socials = ["WhatsApp", "Facebook", "LinkedIn", "Instagram"];
+const socials = [
+  { label: "WhatsApp", href: "https://wa.me/2638644042072?text=Hello%20TGA%2C%20I%20need%20help%20with%20truck%20spares." },
+  { label: "Facebook" },
+  { label: "LinkedIn" },
+  { label: "Instagram" },
+];
 
 export default function ContactPage() {
   return (
@@ -24,7 +29,13 @@ export default function ContactPage() {
         <article className="contact-card large light">
           <h2>Socials</h2>
           {socials.map((social) => (
-            <span key={social}>{social}</span>
+            social.href ? (
+              <a href={social.href} target="_blank" rel="noreferrer" key={social.label}>
+                {social.label}
+              </a>
+            ) : (
+              <span key={social.label}>{social.label}</span>
+            )
           ))}
         </article>
       </section>

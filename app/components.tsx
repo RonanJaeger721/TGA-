@@ -77,6 +77,16 @@ export function PageShell({ children }: { children: React.ReactNode }) {
       <SiteHeader />
       {children}
       <SiteFooter />
+      <a
+        className="whatsapp-float"
+        href="https://wa.me/2638644042072?text=Hello%20TGA%2C%20I%20need%20help%20with%20truck%20spares."
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat with TGA on WhatsApp"
+      >
+        <span>WhatsApp</span>
+        <strong>Chat now</strong>
+      </a>
     </main>
   );
 }
