@@ -12,6 +12,8 @@
   --soft-blue: #eef7ff;
   --shadow: 0 24px 70px rgba(9, 21, 34, 0.1);
   --shadow-strong: 0 34px 90px rgba(9, 21, 34, 0.16);
+  --display-font: "Bellatrix", "Clinton Bold", "Aquila", "Exen Medium", "Arial Black", Impact, sans-serif;
+  --body-font: "Aptos", "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
 @theme inline {
@@ -27,7 +29,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: linear-gradient(180deg, #fff 0%, var(--paper) 48%, #fff 100%);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body-font);
 }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
@@ -78,6 +80,7 @@ img { display: block; max-width: 100%; }
   object-position: 50% 44%;
   border-radius: 12px;
   background: white;
+  box-shadow: inset 0 0 0 999px white;
 }
 .brand-lockup span { display: grid; gap: 2px; }
 .brand-lockup strong { font-size: 0.98rem; letter-spacing: 0; }
@@ -224,7 +227,9 @@ img { display: block; max-width: 100%; }
   margin: 12px 0 0;
   font-size: clamp(2.25rem, 4.1vw, 4.35rem);
   line-height: 1.04;
-  letter-spacing: 0;
+  letter-spacing: -0.035em;
+  font-family: var(--display-font);
+  font-weight: 900;
 }
 .hero-copy p:not(.eyebrow),
 .sub-hero p:not(.eyebrow),
@@ -250,6 +255,10 @@ img { display: block; max-width: 100%; }
   background: #0b1622;
   box-shadow: var(--shadow-strong);
 }
+.real-truck-stage {
+  background:
+    linear-gradient(135deg, #ffffff 0%, #eef4fa 50%, #ffffff 100%);
+}
 .stage-scene,
 .stage-tga-badge {
   position: absolute;
@@ -261,14 +270,15 @@ img { display: block; max-width: 100%; }
   object-fit: cover;
   transform: scale(1.04);
   filter: saturate(1.08) contrast(1.02);
+  opacity: 0.46;
 }
 .truck-stage::after {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(7,17,31,0.04), rgba(7,17,31,0.58)),
-    radial-gradient(circle at 18% 18%, rgba(255,255,255,0.22), transparent 26%);
+    linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.28)),
+    radial-gradient(circle at 18% 18%, rgba(255,255,255,0.72), transparent 26%);
 }
 .stage-tga-badge {
   left: 24px;
@@ -282,6 +292,43 @@ img { display: block; max-width: 100%; }
   border-radius: 20px;
   background: white;
   box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+}
+.hero-truck-card {
+  position: absolute;
+  z-index: 3;
+  right: -4%;
+  top: 88px;
+  width: min(88%, 620px);
+  border-radius: 28px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 34px 90px rgba(9, 21, 34, 0.24);
+  animation: heroTruckFloat 6.5s ease-in-out infinite;
+}
+.hero-truck-card img {
+  width: 100%;
+  aspect-ratio: 1.58;
+  object-fit: cover;
+}
+.truck-carousel {
+  position: absolute;
+  z-index: 4;
+  left: 20px;
+  right: 20px;
+  bottom: 18px;
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: truckCarousel 22s linear infinite;
+}
+.truck-carousel img {
+  width: 132px;
+  height: 78px;
+  object-fit: cover;
+  border: 5px solid white;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 14px 34px rgba(9, 21, 34, 0.18);
 }
 .moving-truck {
   position: absolute;
@@ -497,7 +544,9 @@ h2 {
   margin: 10px 0 0;
   font-size: clamp(1.65rem, 2.7vw, 2.95rem);
   line-height: 1.08;
-  letter-spacing: 0;
+  letter-spacing: -0.025em;
+  font-family: var(--display-font);
+  font-weight: 900;
 }
 .section-head { max-width: 780px; margin-bottom: 34px; }
 .parts-grid,
@@ -709,6 +758,13 @@ h2 {
 @keyframes floatTwo { 50% { transform: translateY(12px) rotate(2deg); } }
 @keyframes truckMove { 50% { transform: translateX(-34px); } }
 @keyframes wheelSpin { to { transform: rotate(360deg); } }
+@keyframes heroTruckFloat {
+  50% { transform: translateY(-12px) translateX(-8px) rotate(-0.7deg); }
+}
+@keyframes truckCarousel {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 
 .motion-ready .reveal-target {
   opacity: 0;
@@ -806,6 +862,15 @@ h2 {
     width: min(68%, 240px);
     height: 96px;
     border-width: 8px;
+  }
+  .hero-truck-card {
+    top: 126px;
+    right: -26%;
+    width: 118%;
+  }
+  .truck-carousel img {
+    width: 108px;
+    height: 66px;
   }
   .moving-truck { right: -120px; transform: scale(0.74); transform-origin: right bottom; }
   .parts-grid,

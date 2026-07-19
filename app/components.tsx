@@ -21,7 +21,7 @@ export function SiteHeader() {
       </div>
       <header className="nav-wrap" aria-label="Main navigation">
         <Link className="brand-lockup" href="/" aria-label="TGA home">
-          <img src="/brand/tga-logo.jpeg" alt="" />
+          <img src="/brand/tga-logo-white.png" alt="" />
           <span>
             <strong>Truck Gear Autoparts</strong>
             <small>Reliable parts for reliable trucks</small>
@@ -34,7 +34,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <a className="nav-call" href="https://wa.me/2638644042072">
+        <a className="nav-call" href="https://wa.me/263781932267">
           Send inquiry
         </a>
       </header>
@@ -44,7 +44,7 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   const footerContacts = [
-    { icon: "☎", label: contacts.phone1, href: "tel:+2638644042072" },
+    { icon: "☎", label: contacts.phone1, href: "tel:+263781932267" },
     { icon: "☎", label: contacts.phone2, href: "tel:+263783298888" },
     { icon: "✉", label: contacts.email, href: `mailto:${contacts.email}` },
   ];
@@ -52,7 +52,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div>
-        <img className="footer-main-logo" src="/brand/tga-logo.jpeg" alt="TGA truck logo" />
+        <img className="footer-main-logo" src="/brand/tga-logo-white.png" alt="TGA truck logo" />
         <p>Truck Gear Auto Parts supplies heavy-duty spare parts across Zimbabwe and Southern Africa.</p>
       </div>
       <div>
@@ -88,7 +88,7 @@ export function PageShell({ children }: { children: React.ReactNode }) {
       <SiteFooter />
       <a
         className="whatsapp-float"
-        href="https://wa.me/2638644042072?text=Hello%20TGA%2C%20I%20need%20help%20with%20truck%20spares."
+        href="https://wa.me/263781932267?text=Hello%20TGA%2C%20I%20need%20help%20with%20truck%20spares."
         target="_blank"
         rel="noreferrer"
         aria-label="Chat with TGA on WhatsApp"

@@ -1,5 +1,5 @@
 import { PageShell } from "./components";
-import { brands, offers, parts, sceneImages } from "./site-data";
+import { brands, offers, parts, sceneImages, truckImages } from "./site-data";
 
 export default function Home() {
   return (
@@ -7,25 +7,26 @@ export default function Home() {
       <section className="home-hero">
         <div className="hero-copy">
           <p className="eyebrow">Heavy-duty spares supplier</p>
-          <h1>Reliable truck parts for Zimbabwe and Southern Africa.</h1>
+          <h1>Built to keep Zimbabwe’s Shacman fleets moving.</h1>
           <p>
-            Truck Gear Auto Parts supplies genuine and quality Shacman, Weichai,
-            Cummins and Asian truck spares for transporters and operators.
+            Talk to a team that understands the pressure of a grounded truck.
+            TGA helps operators find genuine spares, confirm fitment and move parts fast.
           </p>
           <div className="hero-actions">
             <a className="primary-btn" href="/spare-parts">Explore spares</a>
             <a className="secondary-btn" href="/contact">Talk to sales</a>
           </div>
         </div>
-        <div className="truck-stage" aria-label="TGA Shacman spares supply scene">
-          <img className="stage-scene" src={sceneImages.warehouse} alt="Shacman warehouse and spares supply" />
-          <img className="stage-tga-badge" src="/brand/tga-logo.jpeg" alt="TGA truck logo" />
-          <div className="moving-truck" aria-hidden="true">
-            <span className="truck-body" />
-            <span className="truck-cab" />
-            <span className="truck-window" />
-            <span className="truck-wheel wheel-a" />
-            <span className="truck-wheel wheel-b" />
+        <div className="truck-stage real-truck-stage" aria-label="Real Shacman truck showcase">
+          <img className="stage-scene" src="/brand/shacman-x3000-yard.jpg" alt="Real Shacman X3000 truck" />
+          <img className="stage-tga-badge" src="/brand/tga-logo-white.png" alt="TGA truck logo" />
+          <div className="hero-truck-card">
+            <img src="/brand/shacman-road-truck.png" alt="Shacman truck in motion" />
+          </div>
+          <div className="truck-carousel" aria-label="Shacman truck models carousel">
+            {[...truckImages, ...truckImages].map((truck, index) => (
+              <img src={truck} alt="Shacman truck" key={`${truck}-${index}`} />
+            ))}
           </div>
         </div>
       </section>

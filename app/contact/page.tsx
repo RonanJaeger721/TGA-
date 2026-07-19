@@ -2,7 +2,7 @@ import { PageHero, PageShell } from "../components";
 import { contacts } from "../site-data";
 
 const socials = [
-  { label: "WhatsApp", href: "https://wa.me/2638644042072?text=Hello%20TGA%2C%20I%20need%20help%20with%20truck%20spares." },
+  { label: "WhatsApp", href: "https://wa.me/263781932267?text=Hello%20TGA%2C%20I%20need%20help%20with%20truck%20spares." },
   { label: "Facebook" },
   { label: "LinkedIn" },
   { label: "Instagram" },
@@ -13,15 +13,15 @@ export default function ContactPage() {
     <PageShell>
       <PageHero
         eyebrow="Contact TGA"
-        title="Talk to the parts counter."
-        text="Send a truck model, part number, sample photo or diagnosis request and the team will help identify the right spare."
-        image="/brand/tga-logo.jpeg"
+        title="Talk to the team that keeps trucks earning."
+        text="Share what is happening with the truck — a part photo, model, fault, sound or sample — and the TGA team will help trace the right solution."
+        image="/brand/tga-logo-white.png"
       />
 
       <section className="contact-grid-page">
         <article className="contact-card large">
           <h2>All contacts</h2>
-          <a href="tel:+2638644042072">{contacts.phone1}</a>
+          <a href="tel:+263781932267">{contacts.phone1}</a>
           <a href="tel:+263783298888">{contacts.phone2}</a>
           <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
           <p>{contacts.address}</p>

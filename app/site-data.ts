@@ -1,6 +1,6 @@
 export const contacts = {
-  address: "Shop 13, 33 Belvedere Road, Harare, Zimbabwe",
-  phone1: "+2638644042072",
+  address: "Shop 3, Number 35 Delvidere Road, Harare",
+  phone1: "0781 932 267",
   phone2: "0783 298 888",
   email: "sales@truckgearauto.co.zw",
 };
@@ -8,7 +8,7 @@ export const contacts = {
 export const brands = [
   { name: "Shacman", logo: "/brand/logos/shacman.jpg" },
   { name: "Cummins", logo: "/brand/logos/cummins.jpg" },
-  { name: "Weichai", logo: null },
+  { name: "Weichai", logo: "/brand/logos/weichai.jpg" },
   { name: "Wabco", logo: "/brand/logos/wabco.jpg" },
   { name: "Fleetguard", logo: "/brand/logos/fleetguard.jpg" },
   { name: "Hande Axle", logo: "/brand/logos/hande-axle.jpg" },
@@ -110,3 +110,9 @@ export const sceneImages = {
     "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=80",
   diagnostics: "/brand/diagnosis-tablet.jpeg",
 };
+
+export const truckImages = [
+  "/brand/shacman-road-truck.png",
+  "/brand/shacman-x3000-yard.jpg",
+  "/brand/shacman-white-yard.webp",
+];
