@@ -12,7 +12,7 @@
   --soft-blue: #eef7ff;
   --shadow: 0 24px 70px rgba(9, 21, 34, 0.1);
   --shadow-strong: 0 34px 90px rgba(9, 21, 34, 0.16);
-  --display-font: "Bellatrix", "Clinton Bold", "Aquila", "Exen Medium", "Arial Black", Impact, sans-serif;
+  --display-font: "Bellatrix", "Oswald", "Clinton Bold", "Aquila", "Exen Medium", "Arial Narrow", "Segoe UI", sans-serif;
   --body-font: "Aptos", "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
@@ -124,7 +124,7 @@ img { display: block; max-width: 100%; }
   border-radius: 999px;
   padding: 0 18px;
   font-size: 0.86rem;
-  font-weight: 800;
+  font-weight: 720;
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 .nav-call,
@@ -181,7 +181,7 @@ img { display: block; max-width: 100%; }
 }
 .whatsapp-float span {
   font-size: 0.68rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.12em;
   line-height: 1;
   text-transform: uppercase;
@@ -229,7 +229,7 @@ img { display: block; max-width: 100%; }
   line-height: 1.04;
   letter-spacing: -0.035em;
   font-family: var(--display-font);
-  font-weight: 900;
+  font-weight: 760;
 }
 .hero-copy p:not(.eyebrow),
 .sub-hero p:not(.eyebrow),
@@ -270,7 +270,9 @@ img { display: block; max-width: 100%; }
   object-fit: cover;
   transform: scale(1.04);
   filter: saturate(1.08) contrast(1.02);
-  opacity: 0.46;
+  opacity: 0;
+  animation: heroSceneFade 25s ease-in-out infinite;
+  animation-delay: calc(var(--scene-index) * 5s);
 }
 .truck-stage::after {
   content: "";
@@ -293,93 +295,27 @@ img { display: block; max-width: 100%; }
   background: white;
   box-shadow: 0 24px 60px rgba(0,0,0,0.22);
 }
-.hero-truck-card {
-  position: absolute;
-  z-index: 3;
-  right: -4%;
-  top: 88px;
-  width: min(88%, 620px);
-  border-radius: 28px;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 34px 90px rgba(9, 21, 34, 0.24);
-  animation: heroTruckFloat 6.5s ease-in-out infinite;
-}
-.hero-truck-card img {
-  width: 100%;
-  aspect-ratio: 1.58;
-  object-fit: cover;
-}
 .truck-carousel {
   position: absolute;
   z-index: 4;
   left: 20px;
   right: 20px;
-  bottom: 18px;
+  bottom: -4px;
   display: flex;
   gap: 12px;
   width: max-content;
-  animation: truckCarousel 22s linear infinite;
+  opacity: 0.92;
+  animation: truckCarousel 30s linear infinite;
 }
 .truck-carousel img {
-  width: 132px;
-  height: 78px;
+  width: 118px;
+  height: 70px;
   object-fit: cover;
   border: 5px solid white;
   border-radius: 16px;
   background: white;
   box-shadow: 0 14px 34px rgba(9, 21, 34, 0.18);
 }
-.moving-truck {
-  position: absolute;
-  z-index: 3;
-  right: 4%;
-  bottom: 42px;
-  width: min(560px, 92%);
-  height: 160px;
-  animation: truckMove 5.8s ease-in-out infinite;
-}
-.moving-truck span { position: absolute; display: block; }
-.truck-body {
-  left: 0;
-  bottom: 42px;
-  width: 360px;
-  height: 76px;
-  border-radius: 18px 8px 8px 18px;
-  border: 5px solid var(--blue);
-  background: rgba(255,255,255,0.92);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
-}
-.truck-cab {
-  right: 0;
-  bottom: 42px;
-  width: 165px;
-  height: 108px;
-  border: 5px solid var(--red);
-  border-radius: 24px 36px 18px 18px;
-  background: white;
-  clip-path: polygon(0 26%, 48% 0, 100% 0, 100% 100%, 0 100%);
-}
-.truck-window {
-  right: 46px;
-  bottom: 94px;
-  width: 58px;
-  height: 30px;
-  background: var(--soft-blue);
-  border-radius: 8px;
-}
-.truck-wheel {
-  bottom: 10px;
-  width: 48px;
-  height: 48px;
-  border: 8px solid var(--ink);
-  border-radius: 50%;
-  background: white;
-  animation: wheelSpin 1.2s linear infinite;
-}
-.wheel-a { left: 74px; }
-.wheel-b { right: 62px; }
-
 .brand-section,
 .parts-section,
 .truck-gallery-section,
@@ -416,7 +352,7 @@ img { display: block; max-width: 100%; }
   border-radius: 999px;
   background: white;
   box-shadow: 0 12px 34px rgba(9, 21, 34, 0.06);
-  font-weight: 800;
+  font-weight: 760;
 }
 .brand-grid span { font-size: clamp(0.98rem, 1.35vw, 1.22rem); }
 
@@ -579,7 +515,7 @@ h2 {
   line-height: 1.08;
   letter-spacing: -0.025em;
   font-family: var(--display-font);
-  font-weight: 900;
+  font-weight: 760;
 }
 .section-head { max-width: 780px; margin-bottom: 34px; }
 .parts-grid,
@@ -594,7 +530,7 @@ h2 {
 .part-card a,
 .model-card a { margin-top: 10px; text-transform: uppercase; font-size: 0.78rem; }
 .model-card { display: grid; gap: 12px; min-height: 210px; }
-.model-card span { color: var(--blue); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; }
+.model-card span { color: var(--blue); font-size: 0.72rem; font-weight: 720; text-transform: uppercase; letter-spacing: 0.1em; }
 .model-card strong { font-size: 1.18rem; }
 .service-list { padding: 0 5vw 82px; }
 .service-command {
@@ -626,7 +562,7 @@ h2 {
   background: rgba(7,17,31,0.72);
   backdrop-filter: blur(14px);
   font-size: 0.78rem;
-  font-weight: 900;
+  font-weight: 740;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -661,7 +597,7 @@ h2 {
   gap: 14px;
   padding: 18px 20px;
   color: var(--ink);
-  font-weight: 900;
+  font-weight: 760;
 }
 .service-accordion summary::-webkit-details-marker { display: none; }
 .service-accordion summary::after {
@@ -694,7 +630,7 @@ h2 {
 .offer-strip span { color: white; background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.24); }
 .history-section { background: #edf2f7; }
 .offer-stack { display: grid; gap: 12px; }
-.offer-stack span { padding: 16px 18px; border-radius: 12px; background: white; font-weight: 800; }
+.offer-stack span { padding: 16px 18px; border-radius: 12px; background: white; font-weight: 720; }
 .light { color: var(--ink); background: white !important; }
 .contact-card.large { display: grid; gap: 12px; }
 .contact-card.large a,
@@ -789,10 +725,10 @@ h2 {
 }
 @keyframes floatOne { 50% { transform: translateY(-10px) rotate(-1deg); } }
 @keyframes floatTwo { 50% { transform: translateY(12px) rotate(2deg); } }
-@keyframes truckMove { 50% { transform: translateX(-34px); } }
-@keyframes wheelSpin { to { transform: rotate(360deg); } }
-@keyframes heroTruckFloat {
-  50% { transform: translateY(-12px) translateX(-8px) rotate(-0.7deg); }
+@keyframes heroSceneFade {
+  0%, 100% { opacity: 0; transform: scale(1.06); }
+  6%, 18% { opacity: 0.58; transform: scale(1.025); }
+  25% { opacity: 0; transform: scale(1.02); }
 }
 @keyframes truckCarousel {
   from { transform: translateX(0); }
@@ -900,16 +836,10 @@ h2 {
     height: 96px;
     border-width: 8px;
   }
-  .hero-truck-card {
-    top: 126px;
-    right: -26%;
-    width: 118%;
-  }
   .truck-carousel img {
     width: 108px;
     height: 66px;
   }
-  .moving-truck { right: -120px; transform: scale(0.74); transform-origin: right bottom; }
   .parts-grid,
   .model-grid,
   .truck-gallery { grid-template-columns: 1fr; }
