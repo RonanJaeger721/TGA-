@@ -382,6 +382,7 @@ img { display: block; max-width: 100%; }
 
 .brand-section,
 .parts-section,
+.truck-gallery-section,
 .scene-grid,
 .offer-strip,
 .model-strip,
@@ -393,6 +394,10 @@ img { display: block; max-width: 100%; }
   padding: 82px 5vw;
 }
 .brand-section { background: white; }
+.truck-gallery-section {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+}
 .brand-section.compact { padding-top: 42px; padding-bottom: 42px; }
 .brand-grid,
 .model-strip,
@@ -484,6 +489,7 @@ img { display: block; max-width: 100%; }
 .brand-hande-axle::before { background: #245f9e; }
 
 .scene-grid,
+.truck-gallery,
 .service-command,
 .service-scenes,
 .about-split,
@@ -494,7 +500,12 @@ img { display: block; max-width: 100%; }
   gap: 24px;
 }
 .service-scenes { grid-template-columns: repeat(3, 1fr); }
+.truck-gallery {
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  grid-auto-rows: 230px;
+}
 .scene-grid article,
+.truck-gallery article,
 .service-command,
 .service-scenes article,
 .about-split article,
@@ -511,6 +522,7 @@ img { display: block; max-width: 100%; }
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 .scene-grid article:hover,
+.truck-gallery article:hover,
 .service-scenes article:hover,
 .about-split article:hover,
 .contact-card.large:hover,
@@ -521,6 +533,7 @@ img { display: block; max-width: 100%; }
   box-shadow: var(--shadow-strong);
 }
 .scene-grid img,
+.truck-gallery img,
 .service-command-image img,
 .service-scenes img,
 .sub-hero img,
@@ -528,6 +541,26 @@ img { display: block; max-width: 100%; }
   width: 100%;
   aspect-ratio: 1.38;
   object-fit: cover;
+}
+.truck-gallery article {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 18px 46px rgba(9, 21, 34, 0.07);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+.truck-gallery .feature-truck {
+  grid-row: span 2;
+}
+.truck-gallery img {
+  height: 100%;
+  aspect-ratio: auto;
+  transition: transform 520ms ease, filter 520ms ease;
+}
+.truck-gallery article:hover img {
+  transform: scale(1.055);
+  filter: saturate(1.08) contrast(1.04);
 }
 .sub-hero img { border-radius: 16px; box-shadow: var(--shadow); }
 .scene-grid article div,
@@ -792,6 +825,8 @@ h2 {
 @supports (animation-timeline: view()) {
   .brand-section,
   .scene-grid,
+  .truck-gallery-section,
+  .truck-gallery,
   .service-command,
   .offer-strip,
   .parts-section,
@@ -823,6 +858,7 @@ h2 {
   .home-hero,
   .sub-hero,
   .scene-grid,
+  .truck-gallery,
   .service-command,
   .service-scenes,
   .about-split,
@@ -835,6 +871,7 @@ h2 {
   .sub-hero,
   .brand-section,
   .parts-section,
+  .truck-gallery-section,
   .scene-grid,
   .service-command,
   .offer-strip,
@@ -874,5 +911,8 @@ h2 {
   }
   .moving-truck { right: -120px; transform: scale(0.74); transform-origin: right bottom; }
   .parts-grid,
-  .model-grid { grid-template-columns: 1fr; }
+  .model-grid,
+  .truck-gallery { grid-template-columns: 1fr; }
+  .truck-gallery { grid-auto-rows: 240px; }
+  .truck-gallery .feature-truck { grid-row: span 1; }
 }

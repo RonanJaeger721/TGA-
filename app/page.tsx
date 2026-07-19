@@ -18,7 +18,7 @@ export default function Home() {
           </div>
         </div>
         <div className="truck-stage real-truck-stage" aria-label="Real Shacman truck showcase">
-          <img className="stage-scene" src="/brand/shacman-x3000-yard.jpg" alt="Real Shacman X3000 truck" />
+          <img className="stage-scene" src="/brand/shacman-clean-yard.jpg" alt="Real Shacman X3000 truck" />
           <img className="stage-tga-badge" src="/brand/tga-logo-white.png" alt="TGA truck logo" />
           <div className="hero-truck-card">
             <img src="/brand/shacman-road-truck.png" alt="Shacman truck in motion" />
@@ -28,6 +28,24 @@ export default function Home() {
               <img src={truck} alt="Shacman truck" key={`${truck}-${index}`} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="truck-gallery-section">
+        <div className="section-head">
+          <p className="eyebrow">Shacman fleet focus</p>
+          <h2>Real trucks. Real roads. Real uptime pressure.</h2>
+          <p>
+            TGA supports the trucks that carry fuel, cargo and materials across Zimbabwe —
+            with parts sourcing that understands the models operators actually run.
+          </p>
+        </div>
+        <div className="truck-gallery">
+          {truckImages.slice(1, 7).map((truck, index) => (
+            <article key={truck} className={index === 0 ? "feature-truck" : ""}>
+              <img src={truck} alt="Shacman truck in operation" />
+            </article>
+          ))}
         </div>
       </section>
 
