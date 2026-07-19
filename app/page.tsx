@@ -17,8 +17,9 @@ export default function Home() {
             <a className="secondary-btn" href="/contact">Talk to sales</a>
           </div>
         </div>
-        <div className="truck-stage" aria-label="Moving Shacman truck and spare parts">
-          <img className="stage-part" src="/spares/engine-assembly.jpg" alt="Truck engine spare" />
+        <div className="truck-stage" aria-label="TGA Shacman spares supply scene">
+          <img className="stage-scene" src={sceneImages.warehouse} alt="Shacman warehouse and spares supply" />
+          <img className="stage-tga-badge" src="/brand/tga-logo.jpeg" alt="TGA truck logo" />
           <div className="moving-truck" aria-hidden="true">
             <span className="truck-body" />
             <span className="truck-cab" />
@@ -26,7 +27,6 @@ export default function Home() {
             <span className="truck-wheel wheel-a" />
             <span className="truck-wheel wheel-b" />
           </div>
-          <img className="stage-logo" src="/brand/shacman-mark.jpeg" alt="Shacman parts and accessories" />
         </div>
       </section>
 

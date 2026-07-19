@@ -43,18 +43,27 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
+  const footerContacts = [
+    { icon: "☎", label: contacts.phone1, href: "tel:+2638644042072" },
+    { icon: "☎", label: contacts.phone2, href: "tel:+263783298888" },
+    { icon: "✉", label: contacts.email, href: `mailto:${contacts.email}` },
+  ];
+
   return (
     <footer className="site-footer">
       <div>
-        <img className="footer-main-logo" src="/brand/shacman-mark.jpeg" alt="Shacman parts and accessories" />
+        <img className="footer-main-logo" src="/brand/tga-logo.jpeg" alt="TGA truck logo" />
         <p>Truck Gear Auto Parts supplies heavy-duty spare parts across Zimbabwe and Southern Africa.</p>
       </div>
       <div>
         <h3>Contact</h3>
-        <a href="tel:+2638644042072">{contacts.phone1}</a>
-        <a href="tel:+263783298888">{contacts.phone2}</a>
-        <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
-        <p>{contacts.address}</p>
+        {footerContacts.map((item) => (
+          <a className="footer-link" href={item.href} key={item.href}>
+            <span aria-hidden="true">{item.icon}</span>
+            {item.label}
+          </a>
+        ))}
+        <p className="footer-location"><span aria-hidden="true">⌖</span>{contacts.address}</p>
       </div>
       <div>
         <h3>Brands</h3>
