@@ -102,7 +102,7 @@ export const profile = {
 };
 
 export const sceneImages = {
-  warehouse: "/brand/warehouse-shacman.jpeg",
+  warehouse: "/brand/shacman-warehouse-fleet-ai.png",
   sales:
     "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=80",
   workshop: "/brand/service-advisor.jpeg",
