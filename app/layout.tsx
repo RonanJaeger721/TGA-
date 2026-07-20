@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "TGA Truck Gear Autoparts",
     description:
       "Reliable Shacman parts and accessories for reliable trucks in Zimbabwe.",
-    images: ["/brand/boardroom-spares-team.png"],
+    images: ["/brand/african-warehouse-team.png"],
   },
   icons: {
     icon: "/favicon.ico",

@@ -1,5 +1,5 @@
 import { PageHero, PageShell } from "../components";
-import { offers, profile } from "../site-data";
+import { offers, profile, sceneImages } from "../site-data";
 
 export default function AboutPage() {
   return (
@@ -8,7 +8,7 @@ export default function AboutPage() {
         eyebrow="Company profile"
         title="We are a team of problem solvers for the transport industry all around Zimbabwe."
         text={profile.overview}
-        image="/brand/boardroom-spares-team.png"
+        image={sceneImages.team}
       />
 
       <section className="about-split">

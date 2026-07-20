@@ -103,7 +103,8 @@ export const profile = {
 
 export const sceneImages = {
   warehouse: "/brand/warehouse-spares-boxes-ai.png",
-  sales: "/brand/sales-team-balanced-ai.png",
+  sales: "/brand/sales-team-african-spares.png",
+  team: "/brand/african-warehouse-team.png",
   workshop: "/brand/service-advisor.jpeg",
   mechanics:
     "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=80",
