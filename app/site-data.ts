@@ -112,19 +112,17 @@ export const sceneImages = {
 };
 
 export const truckImages = [
-  "/brand/shacman-road-truck.png",
-  "/brand/shacman-road-convoy.jpg",
-  "/brand/shacman-local-haulage.jpg",
   "/brand/shacman-x3000-yard.jpg",
-  "/brand/shacman-white-tractor-yard.jpg",
   "/brand/shacman-x3000-front.jpg",
-  "/brand/shacman-blue-front.jpg",
   "/brand/shacman-clean-yard.jpg",
+  "/brand/shacman-white-tractor-yard.jpg",
+  "/brand/shacman-blue-front.jpg",
   "/brand/shacman-white-yard.webp",
 ];
 
 export const heroCatalogImages = [
-  "/brand/shacman-road-truck.png",
+  "/brand/shacman-x3000-yard.jpg",
+  "/brand/shacman-x3000-front.jpg",
   "/spares/clutch-kit.jpg",
   "/spares/cylinder-head.jpg",
   "/spares/engine-block.jpg",

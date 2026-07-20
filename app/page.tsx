@@ -25,7 +25,7 @@ export default function Home() {
             muted
             loop
             playsInline
-            poster="/brand/shacman-clean-yard.jpg"
+            poster="/brand/shacman-x3000-yard.jpg"
             aria-label="Shacman truck video"
           />
           <img className="stage-tga-badge floating-logo" src="/brand/tga-logo-transparent.png" alt="TGA truck logo" />
@@ -47,7 +47,7 @@ export default function Home() {
           </p>
         </div>
         <article className="single-truck-landscape">
-          <img src="/brand/shacman-blue-front.jpg" alt="Blue Shacman truck" />
+          <img src="/brand/shacman-x3000-yard.jpg" alt="Shacman X3000 truck" />
         </article>
       </section>
 
