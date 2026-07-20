@@ -1,6 +1,5 @@
 import { PageShell } from "./components";
-import { brands, heroCatalogImages, offers, parts, sceneImages, truckImages } from "./site-data";
-import type { CSSProperties } from "react";
+import { brands, heroCatalogImages, offers, parts, sceneImages } from "./site-data";
 
 export default function Home() {
   return (
@@ -19,9 +18,16 @@ export default function Home() {
           </div>
         </div>
         <div className="truck-stage real-truck-stage" aria-label="Real Shacman truck showcase">
-          {truckImages.slice(0, 5).map((truck, index) => (
-            <img className="stage-scene" src={truck} alt="Real Shacman truck" key={truck} style={{ "--scene-index": index } as CSSProperties} />
-          ))}
+          <video
+            className="stage-video"
+            src="/brand/shacman-hero-video.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/brand/shacman-clean-yard.jpg"
+            aria-label="Shacman truck video"
+          />
           <img className="stage-tga-badge floating-logo" src="/brand/tga-logo-transparent.png" alt="TGA truck logo" />
           <div className="truck-carousel" aria-label="Available Shacman truck spares catalogue">
             {[...heroCatalogImages, ...heroCatalogImages].map((item, index) => (
