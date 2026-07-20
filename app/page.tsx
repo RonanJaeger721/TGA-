@@ -1,5 +1,5 @@
 import { PageShell } from "./components";
-import { brands, offers, parts, sceneImages, truckImages } from "./site-data";
+import { brands, heroCatalogImages, offers, parts, sceneImages, truckImages } from "./site-data";
 import type { CSSProperties } from "react";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
       <section className="home-hero">
         <div className="hero-copy">
           <p className="eyebrow">Heavy-duty spares supplier</p>
-          <h1>Built to keep Zimbabwe’s Shacman fleets moving.</h1>
+          <h1>We offer a variety of Shacman truck spares all across Zimbabwe.</h1>
           <p>
             Talk to a team that understands the pressure of a grounded truck.
             TGA helps operators find genuine spares, confirm fitment and move parts fast.
@@ -22,10 +22,10 @@ export default function Home() {
           {truckImages.slice(0, 5).map((truck, index) => (
             <img className="stage-scene" src={truck} alt="Real Shacman truck" key={truck} style={{ "--scene-index": index } as CSSProperties} />
           ))}
-          <img className="stage-tga-badge" src="/brand/tga-logo-white.png" alt="TGA truck logo" />
-          <div className="truck-carousel" aria-label="Shacman truck models carousel">
-            {[...truckImages, ...truckImages].map((truck, index) => (
-              <img src={truck} alt="Shacman truck" key={`${truck}-${index}`} />
+          <img className="stage-tga-badge floating-logo" src="/brand/tga-logo-transparent.png" alt="TGA truck logo" />
+          <div className="truck-carousel" aria-label="Available Shacman truck spares catalogue">
+            {[...heroCatalogImages, ...heroCatalogImages].map((item, index) => (
+              <img src={item} alt="Available Shacman truck spare or truck" key={`${item}-${index}`} />
             ))}
           </div>
         </div>
@@ -34,19 +34,15 @@ export default function Home() {
       <section className="truck-gallery-section">
         <div className="section-head">
           <p className="eyebrow">Shacman fleet focus</p>
-          <h2>Real trucks. Real roads. Real uptime pressure.</h2>
+          <h2>Reliable parts and accessories for Shacman trucks.</h2>
           <p>
-            TGA supports the trucks that carry fuel, cargo and materials across Zimbabwe —
-            with parts sourcing that understands the models operators actually run.
+            From engine and filtration support to clutches, brake parts and suspension,
+            TGA supplies parts for the trucks operators rely on every day.
           </p>
         </div>
-        <div className="truck-gallery">
-          {truckImages.slice(1, 7).map((truck, index) => (
-            <article key={truck} className={index === 0 ? "feature-truck" : ""}>
-              <img src={truck} alt="Shacman truck in operation" />
-            </article>
-          ))}
-        </div>
+        <article className="single-truck-landscape">
+          <img src="/brand/shacman-blue-front.jpg" alt="Blue Shacman truck" />
+        </article>
       </section>
 
       <section className="brand-section">
@@ -64,7 +60,7 @@ export default function Home() {
         <article>
           <img src={sceneImages.warehouse} alt="Truck spares warehouse storage" />
           <div>
-            <p className="eyebrow">Secure storage</p>
+            <p className="eyebrow">Bulk storage</p>
             <h2>Warehouse-backed supply.</h2>
             <p>Safe, flexible and cost-effective storage for short-term and long-term spares movement.</p>
           </div>
@@ -73,7 +69,7 @@ export default function Home() {
           <img src={sceneImages.sales} alt="Sales interaction with client" />
           <div>
             <p className="eyebrow">Client support</p>
-            <h2>Sales teams that listen.</h2>
+            <h2>Sales team that listens.</h2>
             <p>Bring a model, sample, photo or part number. TGA helps identify the right replacement.</p>
           </div>
         </article>

@@ -1,7 +1,7 @@
 export const contacts = {
-  address: "Shop 3, Number 35 Delvidere Road, Harare",
+  address: "Shop 3, Number 35 Belvedere Road, Harare",
   phone1: "0781 932 267",
-  phone2: "0783 298 888",
+  phone2: "+2638644042072",
   email: "sales@truckgearauto.co.zw",
 };
 
@@ -29,7 +29,7 @@ export const parts = [
   },
   {
     title: "Gearbox / transmission / clutches",
-    image: "/spares/gearbox.jpg",
+    image: "/spares/clutch-kit.jpg",
     text: "Gearboxes, transmission units, clutch kits and driveline components.",
   },
   {
@@ -94,7 +94,7 @@ export const profile = {
   overview:
     "Truck Gear Auto Parts is a leading supplier of heavy-duty spare parts, dedicated to meeting the needs of transporters and operators across Zimbabwe and Southern Africa.",
   history:
-    "Founded in 2020, Truck Gear Auto Parts was built on a strategic business alliance between young and energetic entrepreneurs with a shared passion for innovation and problem solving.",
+    "We are a team of problem solvers for the transport industry all around Zimbabwe.",
   vision:
     "To become the leading truck spares supplier in Zimbabwe and Southern Africa, recognized for excellence, innovation and customer satisfaction.",
   mission:
@@ -121,4 +121,14 @@ export const truckImages = [
   "/brand/shacman-blue-front.jpg",
   "/brand/shacman-clean-yard.jpg",
   "/brand/shacman-white-yard.webp",
+];
+
+export const heroCatalogImages = [
+  "/brand/shacman-road-truck.png",
+  "/spares/clutch-kit.jpg",
+  "/spares/cylinder-head.jpg",
+  "/spares/engine-block.jpg",
+  "/spares/engine-assembly.jpg",
+  "/brand/parts/part-4.jpg",
+  "/brand/parts/part-6.jpg",
 ];

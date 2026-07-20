@@ -15,14 +15,14 @@ export default function ContactPage() {
         eyebrow="Contact TGA"
         title="Talk to the team that keeps trucks earning."
         text="Share what is happening with the truck — a part photo, model, fault, sound or sample — and the TGA team will help trace the right solution."
-        image="/brand/tga-logo-white.png"
+        image="/brand/contact-handshake.png"
       />
 
       <section className="contact-grid-page">
         <article className="contact-card large">
           <h2>All contacts</h2>
           <a href="tel:+263781932267">{contacts.phone1}</a>
-          <a href="tel:+263783298888">{contacts.phone2}</a>
+          <a href="tel:+2638644042072">{contacts.phone2}</a>
           <a href={`mailto:${contacts.email}`}>{contacts.email}</a>
           <p>{contacts.address}</p>
         </article>

@@ -8,7 +8,7 @@ export default function SparePartsPage() {
         eyebrow="Genuine Shacman spares"
         title="Spare parts for H3000, X3000, X5000, F3000 and M3000."
         text="TGA supplies brand-new and reconditioned heavy-duty spares for Shacman trucks, Weichai engines, Cummins engines and leading Asian truck platforms."
-        image="/spares/gearbox.jpg"
+        image="/spares/clutch-kit.jpg"
       />
 
       <section className="model-strip">

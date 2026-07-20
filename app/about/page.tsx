@@ -6,19 +6,19 @@ export default function AboutPage() {
     <PageShell>
       <PageHero
         eyebrow="Company profile"
-        title="Built by energetic problem solvers for heavy-duty transport."
+        title="We are a team of problem solvers for the transport industry all around Zimbabwe."
         text={profile.overview}
-        image="/brand/tga-flyer.jpeg"
+        image="/brand/boardroom-spares-team.png"
       />
 
       <section className="about-split">
         <article>
-          <p className="eyebrow">Our vision</p>
-          <h2>{profile.vision}</h2>
+          <h2>Our vision</h2>
+          <p>{profile.vision}</p>
         </article>
         <article>
-          <p className="eyebrow">Our mission</p>
-          <h2>{profile.mission}</h2>
+          <h2>Our mission</h2>
+          <p>{profile.mission}</p>
         </article>
       </section>
 

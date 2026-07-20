@@ -6,7 +6,7 @@ export default function ServicesPage() {
     <PageShell>
       <PageHero
         eyebrow="Support services"
-        title="Practical support that keeps Shacman fleets moving."
+        title="24/7 standby support for all Shacman trucks in and passing through Zimbabwe."
         text="From fault diagnosis to sourcing, storage and delivery, TGA supports operators with the right parts and the right guidance."
         image="/brand/service-advisor.jpeg"
       />

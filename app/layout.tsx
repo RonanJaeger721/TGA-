@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.truckgearauto.co.zw"),
+  metadataBase: new URL("https://tga-truck-gear-autoparts.vercel.app"),
   title: "TGA Truck Gear Autoparts | Shacman Parts Zimbabwe",
   description:
     "Zimbabwe and Southern Africa heavy-duty truck spares supplier for Shacman, Cummins, Weichai, Wabco, Fleetguard and Hande Axle.",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "TGA Truck Gear Autoparts",
     description:
       "Reliable Shacman parts and accessories for reliable trucks in Zimbabwe.",
-    images: ["/brand/tga-flyer.jpeg"],
+    images: ["/brand/boardroom-spares-team.png"],
   },
   icons: {
     icon: "/favicon.ico",

@@ -45,7 +45,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   const footerContacts = [
     { icon: "☎", label: contacts.phone1, href: "tel:+263781932267" },
-    { icon: "☎", label: contacts.phone2, href: "tel:+263783298888" },
+    { icon: "☎", label: contacts.phone2, href: "tel:+2638644042072" },
     { icon: "✉", label: contacts.email, href: `mailto:${contacts.email}` },
   ];
 
