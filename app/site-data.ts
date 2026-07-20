@@ -102,7 +102,7 @@ export const profile = {
 };
 
 export const sceneImages = {
-  warehouse: "/brand/shacman-warehouse-fleet-ai.png",
+  warehouse: "/brand/shacman-x3000-clean-close.jpg",
   sales:
     "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=80",
   workshop: "/brand/service-advisor.jpeg",
@@ -123,6 +123,7 @@ export const truckImages = [
 export const heroCatalogImages = [
   "/brand/shacman-x3000-yard.jpg",
   "/brand/shacman-x3000-front.jpg",
+  "/brand/shacman-x3000-double-trailer.webp",
   "/spares/clutch-kit.jpg",
   "/spares/cylinder-head.jpg",
   "/spares/engine-block.jpg",

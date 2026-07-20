@@ -506,7 +506,7 @@ img { display: block; max-width: 100%; }
   aspect-ratio: 1.7;
   object-fit: contain;
   object-position: center;
-  padding: clamp(12px, 2vw, 28px);
+  padding: clamp(8px, 1.25vw, 18px);
   transition: transform 650ms ease, filter 650ms ease;
 }
 .single-truck-landscape:hover img {

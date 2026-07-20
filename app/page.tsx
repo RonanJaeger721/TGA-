@@ -47,7 +47,7 @@ export default function Home() {
           </p>
         </div>
         <article className="single-truck-landscape">
-          <img src="/brand/shacman-blue-front.jpg" alt="Blue Shacman X3000 truck" />
+          <img src="/brand/shacman-x3000-double-trailer.webp" alt="Shacman X3000 double trailer truck" />
         </article>
       </section>
 
