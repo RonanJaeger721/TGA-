@@ -102,7 +102,7 @@ export const profile = {
 };
 
 export const sceneImages = {
-  warehouse: "/brand/shacman-x3000-clean-close.jpg",
+  warehouse: "/brand/warehouse-spares-boxes-ai.png",
   sales:
     "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=80",
   workshop: "/brand/service-advisor.jpeg",
