@@ -719,11 +719,10 @@ h2 {
   background: rgba(255,255,255,0.08);
 }
 .footer-location {
-  display: grid !important;
-  grid-template-columns: 28px minmax(0, 1fr);
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
-  max-width: 340px;
+  color: rgba(255,255,255,0.78);
+  margin: 8px 0;
 }
 .site-footer .footer-brands span {
   color: var(--ink);

@@ -63,7 +63,7 @@ export function SiteFooter() {
             {item.label}
           </a>
         ))}
-        <p className="footer-location"><span aria-hidden="true">⌖</span>{contacts.address}</p>
+        <p className="footer-link footer-location"><span aria-hidden="true">⌖</span>{contacts.address}</p>
       </div>
       <div>
         <h3>Brands</h3>
