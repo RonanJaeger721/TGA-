@@ -19,32 +19,32 @@ export const models = ["H3000", "X3000", "X5000", "F3000", "M3000"];
 export const parts = [
   {
     title: "Filtration",
-    image: "/spares/engine-assembly.jpg",
+    image: "/brand/parts-ai/filtration.png",
     text: "Fleetguard-style oil, fuel, air and service filtration support.",
   },
   {
     title: "Engine parts",
-    image: "/spares/cylinder-head.jpg",
+    image: "/brand/parts-ai/engine.png",
     text: "Cylinder heads, blocks, assemblies, valves and related engine spares.",
   },
   {
     title: "Gearbox / transmission / clutches",
-    image: "/spares/clutch-kit.jpg",
+    image: "/brand/parts-ai/transmission-clutch.png",
     text: "Gearboxes, transmission units, clutch kits and driveline components.",
   },
   {
     title: "Brake parts",
-    image: "/brand/parts/part-4.jpg",
+    image: "/brand/parts-ai/brakes.png",
     text: "Heavy-truck braking parts and Wabco-related support items.",
   },
   {
     title: "Suspension parts",
-    image: "/brand/parts/part-6.jpg",
+    image: "/brand/parts-ai/suspension.png",
     text: "Suspension spares, axle support items, bushes, seals and bearings.",
   },
   {
     title: "Valves, belts and hoses",
-    image: "/spares/engine-block.jpg",
+    image: "/brand/parts-ai/valves-belts-hoses.png",
     text: "Service replacement items for workshop repairs and fleet maintenance.",
   },
 ];
@@ -103,7 +103,7 @@ export const profile = {
 
 export const sceneImages = {
   warehouse: "/brand/warehouse-spares-boxes-ai.png",
-  sales: "/brand/sales-team-consultation-ai.png",
+  sales: "/brand/sales-team-balanced-ai.png",
   workshop: "/brand/service-advisor.jpeg",
   mechanics:
     "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=80",
@@ -120,13 +120,13 @@ export const truckImages = [
 ];
 
 export const heroCatalogImages = [
-  "/brand/shacman-x3000-yard.jpg",
-  "/brand/shacman-x3000-front.jpg",
   "/brand/shacman-x3000-double-trailer.webp",
+  "/brand/parts-ai/filtration.png",
+  "/brand/parts-ai/engine.png",
+  "/brand/parts-ai/transmission-clutch.png",
+  "/brand/parts-ai/brakes.png",
+  "/brand/parts-ai/suspension.png",
+  "/brand/parts-ai/valves-belts-hoses.png",
   "/spares/clutch-kit.jpg",
   "/spares/cylinder-head.jpg",
-  "/spares/engine-block.jpg",
-  "/spares/engine-assembly.jpg",
-  "/brand/parts/part-4.jpg",
-  "/brand/parts/part-6.jpg",
 ];
