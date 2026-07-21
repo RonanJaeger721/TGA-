@@ -244,8 +244,8 @@ img { display: block; max-width: 100%; }
 }
 .home-hero h1 {
   max-width: 100%;
-  font-size: clamp(1.8rem, 2.42vw, 2.95rem);
-  line-height: 1.07;
+  font-size: clamp(1.75rem, 2.08vw, 2.55rem);
+  line-height: 1.06;
 }
 .hero-copy p:not(.eyebrow),
 .sub-hero p:not(.eyebrow),
@@ -261,7 +261,7 @@ img { display: block; max-width: 100%; }
   line-height: 1.55;
 }
 .hero-copy p:not(.eyebrow) {
-  max-width: 1120px;
+  max-width: 100%;
   margin-top: 12px;
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
