@@ -20,7 +20,7 @@ export default function Home() {
         <div className="truck-stage real-truck-stage" aria-label="Real Shacman truck showcase">
           <video
             className="stage-video"
-            src="/brand/shacman-hero-video.mp4"
+            src="/brand/shacman-x3000-series.mp4"
             autoPlay
             muted
             loop
@@ -28,12 +28,15 @@ export default function Home() {
             poster="/brand/shacman-x3000-yard.jpg"
             aria-label="Shacman truck video"
           />
-          <img className="stage-tga-badge floating-logo" src="/brand/tga-logo-transparent.png" alt="TGA truck logo" />
           <div className="truck-carousel" aria-label="Available Shacman truck spares catalogue">
             {[...heroCatalogImages, ...heroCatalogImages].map((item, index) => (
               <img src={item} alt="Available Shacman truck spare or truck" key={`${item}-${index}`} />
             ))}
           </div>
+        </div>
+        <div className="hero-offer-title" aria-label="Main offering">
+          <span>We offer</span>
+          <strong>Shacman Spare Parts and Accessories</strong>
         </div>
       </section>
 
@@ -81,7 +84,7 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="offer-strip">
+      <section className="offer-strip" aria-label="TGA support offering">
         {offers.map((offer) => (
           <span key={offer}>{offer}</span>
         ))}
