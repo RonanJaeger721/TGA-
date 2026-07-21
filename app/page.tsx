@@ -17,11 +17,6 @@ export default function Home() {
             <a className="secondary-btn" href="/contact">Talk to sales</a>
           </div>
         </div>
-        <div className="hero-proof-panel" aria-label="TGA supply promise">
-          <span>Shacman focus</span>
-          <strong>H3000 · X3000 · X5000 · F3000 · M3000</strong>
-          <p>Engine, filtration, gearbox, brake, suspension and service spares ready for Zimbabwean fleets.</p>
-        </div>
         <div className="truck-stage real-truck-stage" aria-label="Real Shacman truck showcase">
           <video
             className="stage-video"
