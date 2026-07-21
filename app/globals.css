@@ -891,8 +891,26 @@ h2 {
 }
 
 @media (max-width: 960px) {
-  .nav-wrap { padding: 14px 20px; }
+  .top-strip {
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 9px 16px;
+    font-size: 0.72rem;
+  }
+  .nav-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 14px 20px;
+  }
   .nav-wrap nav { display: none; }
+  .brand-lockup {
+    flex: 1 1 100%;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .nav-call {
+    min-height: 38px;
+  }
   .home-hero,
   .sub-hero,
   .scene-grid,
@@ -935,8 +953,23 @@ h2 {
   .site-footer {
     padding: 42px 20px;
   }
+  .home-hero {
+    gap: 22px;
+  }
+  .home-hero::before,
+  .sub-hero::before {
+    inset: 18px 12px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    border-radius: 24px;
+  }
   .home-hero h1,
   .sub-hero h1 { font-size: clamp(1.75rem, 7.2vw, 2.65rem); }
+  .hero-copy p:not(.eyebrow) {
+    max-width: 100%;
+  }
+  .hero-actions {
+    width: 100%;
+  }
   .truck-stage { min-height: 300px; }
   .home-hero .truck-stage {
     min-height: 300px;
@@ -946,6 +979,7 @@ h2 {
     border-radius: 24px;
     justify-content: flex-start;
     margin-top: -12px;
+    width: 100%;
   }
   .service-command-image { min-height: 360px; border-radius: 16px 16px 0 0; }
   .service-accordion details p { padding-left: 20px; }
@@ -970,4 +1004,174 @@ h2 {
   .truck-gallery { grid-template-columns: 1fr; }
   .truck-gallery { grid-auto-rows: 240px; }
   .truck-gallery .feature-truck { grid-row: span 1; }
+}
+
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-wrap {
+    gap: 12px;
+    padding: 12px 14px;
+  }
+  .brand-lockup {
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 16px;
+  }
+  .brand-lockup img {
+    width: 96px;
+    height: 48px;
+    border-radius: 10px;
+    flex: 0 0 auto;
+  }
+  .brand-lockup strong {
+    font-size: 0.92rem;
+    line-height: 1.05;
+  }
+  .brand-lockup small {
+    font-size: 0.56rem;
+    letter-spacing: 0.08em;
+  }
+  .nav-call {
+    width: 100%;
+  }
+  .home-hero,
+  .sub-hero,
+  .brand-section,
+  .parts-section,
+  .truck-gallery-section,
+  .scene-grid,
+  .service-command,
+  .offer-strip,
+  .model-strip,
+  .service-scenes,
+  .about-split,
+  .history-section,
+  .contact-grid-page,
+  .site-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .home-hero {
+    padding-top: 34px;
+    padding-bottom: 38px;
+  }
+  .home-hero h1,
+  .sub-hero h1 {
+    font-size: clamp(1.72rem, 9.2vw, 2.35rem);
+    line-height: 1.1;
+    letter-spacing: -0.022em;
+  }
+  .hero-copy p:not(.eyebrow),
+  .sub-hero p:not(.eyebrow),
+  .section-head p,
+  .part-card p,
+  .model-card p,
+  .scene-grid p,
+  .history-section p,
+  .site-footer p {
+    font-size: 0.9rem;
+    line-height: 1.52;
+  }
+  .primary-btn,
+  .secondary-btn {
+    flex: 1 1 140px;
+  }
+  .home-hero .truck-stage {
+    min-height: 250px;
+    border-radius: 20px;
+  }
+  .truck-carousel {
+    left: 12px;
+    right: 12px;
+    bottom: -12px;
+    gap: 8px;
+  }
+  .truck-carousel img {
+    width: 86px;
+    height: 54px;
+    border-width: 3px;
+    border-radius: 12px;
+  }
+  .hero-offer-title {
+    padding: 12px 16px;
+    gap: 6px;
+  }
+  .hero-offer-title span {
+    width: 100%;
+    font-size: 0.66rem;
+  }
+  .hero-offer-title strong {
+    font-size: 1.05rem;
+    line-height: 1.12;
+  }
+  .brand-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .brand-logo-card {
+    min-height: 92px;
+    width: 100%;
+  }
+  .scene-grid,
+  .parts-grid,
+  .model-grid,
+  .service-scenes,
+  .about-split,
+  .history-section,
+  .contact-grid-page {
+    gap: 16px;
+  }
+  .scene-grid article div,
+  .service-command-copy,
+  .service-scenes article div,
+  .about-split article,
+  .history-section > div,
+  .contact-card.large,
+  .part-card div,
+  .model-card {
+    padding: 18px;
+  }
+  .single-truck-landscape {
+    border-radius: 20px;
+  }
+  .single-truck-landscape img {
+    aspect-ratio: 1.25;
+    max-height: none;
+  }
+  .site-footer {
+    gap: 24px;
+    text-align: left;
+  }
+  .site-footer > div:first-child,
+  .site-footer > div:first-child p,
+  .footer-link {
+    max-width: 100%;
+    width: 100%;
+  }
+  .site-footer .footer-main-logo {
+    width: 100%;
+    max-width: 320px;
+    height: 118px;
+  }
+  .footer-brands {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .site-footer .footer-brands .brand-logo-card {
+    min-width: 0;
+    min-height: 70px;
+    padding: 10px !important;
+  }
+  .site-footer .footer-brands .brand-logo-card img {
+    max-width: 100px;
+    max-height: 38px;
+  }
+  .whatsapp-float {
+    right: 12px;
+    bottom: 12px;
+    padding: 10px 13px 10px 40px;
+  }
 }
