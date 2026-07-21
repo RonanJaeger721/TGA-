@@ -230,7 +230,8 @@ img { display: block; max-width: 100%; }
 .sub-hero > div { max-width: 720px; animation: riseIn 900ms cubic-bezier(.16, 1, .3, 1) both; }
 .home-hero .hero-copy {
   grid-column: 1 / -1;
-  max-width: 1180px;
+  max-width: none;
+  width: 100%;
 }
 .home-hero h1,
 .sub-hero h1 {
@@ -240,6 +241,11 @@ img { display: block; max-width: 100%; }
   letter-spacing: -0.028em;
   font-family: var(--display-font);
   font-weight: 620;
+}
+.home-hero h1 {
+  max-width: 100%;
+  font-size: clamp(1.8rem, 2.42vw, 2.95rem);
+  line-height: 1.07;
 }
 .hero-copy p:not(.eyebrow),
 .sub-hero p:not(.eyebrow),
@@ -255,7 +261,7 @@ img { display: block; max-width: 100%; }
   line-height: 1.55;
 }
 .hero-copy p:not(.eyebrow) {
-  max-width: 720px;
+  max-width: 1120px;
   margin-top: 12px;
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
