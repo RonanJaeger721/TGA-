@@ -120,10 +120,10 @@ img { display: block; max-width: 100%; }
   align-items: center;
   justify-content: center;
   width: fit-content;
-  min-height: 44px;
+  min-height: 38px;
   border-radius: 999px;
-  padding: 0 18px;
-  font-size: 0.86rem;
+  padding: 0 15px;
+  font-size: 0.78rem;
   font-weight: 720;
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
@@ -201,9 +201,9 @@ img { display: block; max-width: 100%; }
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 0.88fr) minmax(360px, 0.78fr);
-  gap: 64px;
+  gap: 42px;
   align-items: center;
-  padding: 86px 5vw 78px;
+  padding: 72px 5vw 64px;
   background:
     linear-gradient(120deg, #ffffff 0 52%, #eef4fa 52% 100%),
     radial-gradient(circle at 82% 16%, rgba(18, 111, 175, 0.16), transparent 26rem);
@@ -212,13 +212,14 @@ img { display: block; max-width: 100%; }
 .home-hero {
   grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1fr);
   align-items: end;
-  padding-top: 74px;
+  padding-top: 48px;
+  row-gap: 32px;
 }
 .home-hero::before,
 .sub-hero::before {
   content: "";
   position: absolute;
-  inset: 44px 4vw;
+  inset: 30px 4vw;
   z-index: -1;
   border: 1px solid rgba(18, 111, 175, 0.08);
   background: linear-gradient(90deg, transparent, rgba(237, 28, 46, 0.08), transparent);
@@ -229,16 +230,16 @@ img { display: block; max-width: 100%; }
 .sub-hero > div { max-width: 720px; animation: riseIn 900ms cubic-bezier(.16, 1, .3, 1) both; }
 .home-hero .hero-copy {
   grid-column: 1 / -1;
-  max-width: 980px;
+  max-width: 760px;
 }
 .home-hero h1,
 .sub-hero h1 {
-  margin: 12px 0 0;
-  font-size: clamp(2.55rem, 4.75vw, 5.3rem);
-  line-height: 1.04;
-  letter-spacing: -0.035em;
+  margin: 9px 0 0;
+  font-size: clamp(1.8rem, 3.05vw, 3.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.028em;
   font-family: var(--display-font);
-  font-weight: 660;
+  font-weight: 620;
 }
 .hero-copy p:not(.eyebrow),
 .sub-hero p:not(.eyebrow),
@@ -250,14 +251,18 @@ img { display: block; max-width: 100%; }
 .history-section p,
 .site-footer p {
   color: var(--muted);
-  font-size: 1.02rem;
-  line-height: 1.65;
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hero-copy p:not(.eyebrow) {
+  max-width: 720px;
+  margin-top: 12px;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
 
 .truck-stage {
   position: relative;
-  min-height: 560px;
+  min-height: 380px;
   overflow: hidden;
   border: 1px solid rgba(18, 111, 175, 0.12);
   border-radius: 30px;
@@ -266,8 +271,8 @@ img { display: block; max-width: 100%; }
 }
 .home-hero .truck-stage {
   grid-column: 1 / -1;
-  min-height: clamp(520px, 55vw, 760px);
-  border-radius: 34px;
+  min-height: clamp(340px, 36vw, 510px);
+  border-radius: 28px;
 }
 .real-truck-stage {
   background:
@@ -330,8 +335,8 @@ img { display: block; max-width: 100%; }
   animation: truckCarousel 30s linear infinite;
 }
 .truck-carousel img {
-  width: 176px;
-  height: 108px;
+  width: 132px;
+  height: 82px;
   object-fit: cover;
   border: 5px solid white;
   border-radius: 16px;
@@ -345,8 +350,8 @@ img { display: block; max-width: 100%; }
   align-items: baseline;
   justify-content: center;
   gap: 12px 18px;
-  margin: -22px auto 0;
-  padding: 18px 28px;
+  margin: -14px auto 0;
+  padding: 13px 22px;
   border: 1px solid rgba(18, 111, 175, 0.14);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.95);
@@ -362,8 +367,8 @@ img { display: block; max-width: 100%; }
 }
 .hero-offer-title strong {
   font-family: var(--display-font);
-  font-size: clamp(1.25rem, 2.3vw, 2.15rem);
-  font-weight: 720;
+  font-size: clamp(1.02rem, 1.65vw, 1.55rem);
+  font-weight: 680;
   letter-spacing: -0.02em;
 }
 .brand-section,
@@ -903,13 +908,13 @@ h2 {
   .history-section,
   .contact-grid-page,
   .site-footer {
-    padding: 58px 20px;
+    padding: 42px 20px;
   }
   .home-hero h1,
-  .sub-hero h1 { font-size: clamp(2.1rem, 9vw, 3.65rem); }
-  .truck-stage { min-height: 410px; }
+  .sub-hero h1 { font-size: clamp(1.75rem, 7.2vw, 2.65rem); }
+  .truck-stage { min-height: 300px; }
   .home-hero .truck-stage {
-    min-height: 420px;
+    min-height: 300px;
     border-radius: 24px;
   }
   .hero-offer-title {
