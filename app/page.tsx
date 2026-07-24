@@ -25,7 +25,7 @@ export default function Home() {
             muted
             loop
             playsInline
-            poster="/brand/shacman-x3000-yard.jpg"
+            preload="auto"
             aria-label="Shacman truck video"
           />
           <div className="truck-carousel" aria-label="Available Shacman truck spares catalogue">

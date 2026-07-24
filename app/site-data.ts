@@ -6,12 +6,12 @@ export const contacts = {
 };
 
 export const brands = [
-  { name: "Shacman", logo: "/brand/logos/shacman.jpg" },
-  { name: "Cummins", logo: "/brand/logos/cummins.jpg" },
-  { name: "Weichai", logo: "/brand/logos/weichai.jpg" },
-  { name: "Wabco", logo: "/brand/logos/wabco.jpg" },
-  { name: "Fleetguard", logo: "/brand/logos/fleetguard.jpg" },
-  { name: "Hande Axle", logo: "/brand/logos/hande-axle.jpg" },
+  { name: "Shacman", logo: "/brand/logos-clean/shacman.png" },
+  { name: "Cummins", logo: "/brand/logos-clean/cummins.png" },
+  { name: "Weichai", logo: "/brand/logos-clean/weichai.png" },
+  { name: "Wabco", logo: "/brand/logos-clean/wabco.png" },
+  { name: "Fleetguard", logo: "/brand/logos-clean/fleetguard.png" },
+  { name: "Hande Axle", logo: "/brand/logos-clean/hande-axle.png" },
 ];
 
 export const models = ["H3000", "X3000", "X5000", "F3000", "M3000"];

@@ -457,11 +457,12 @@ img { display: block; max-width: 100%; }
 }
 .brand-logo-card img {
   width: auto;
-  max-width: min(180px, 92%);
+  max-width: min(196px, 94%);
   height: auto;
-  max-height: 76px;
+  max-height: 84px;
   object-fit: contain;
-  mix-blend-mode: multiply;
+  mix-blend-mode: normal;
+  image-rendering: auto;
 }
 .brand-logo-card strong {
   color: var(--ink);
